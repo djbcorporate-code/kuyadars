@@ -19,14 +19,14 @@ export function App() {
     <div className="site-shell">
       <header className="topbar">
         <Link to="/" className="brand" aria-label="Kuya Dars home">
-          <span className="brand-mark" aria-hidden="true"><span>KD</span></span>
-          <span><strong>Kuya Dars</strong><small>Lechon Manok</small></span>
+          <span className="brand-mark" aria-hidden="true"><img src="/kuya-dars-logo.png" alt="" width="1254" height="1254" decoding="async" /></span>
+          <span className="brand-name"><strong>Kuya Dars</strong><small>Lechon Manok</small></span>
         </Link>
         <nav aria-label="Main navigation">
-          <NavLink to="/order">Order</NavLink>
-          <NavLink to="/track">Track</NavLink>
-          {isStaff && <NavLink to="/csr">Operations</NavLink>}
-          <NavLink to="/account">{user ? user.fullName.split(" ")[0] : "Sign in"}</NavLink>
+          {isStaff && <NavLink className="nav-secondary" to="/csr">Operations</NavLink>}
+          <NavLink className="nav-secondary" to="/track">Track order</NavLink>
+          <NavLink className="nav-account" to="/account">{user ? user.fullName.split(" ")[0] : "Sign in"}</NavLink>
+          <NavLink className="nav-order" to="/order">Order now <span aria-hidden="true">→</span></NavLink>
         </nav>
       </header>
       <main>
@@ -44,7 +44,7 @@ export function App() {
         </Routes>
       </main>
       <footer>
-        <div><strong>Kuya Dars Lechon Manok</strong><span>Extra Laki, Extra Sarap.</span></div>
+        <div className="footer-brand"><img src="/kuya-dars-logo.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" /><div><strong>Kuya Dars Lechon Manok</strong><span>Extra Laki, Extra Sarap.</span></div></div>
         <div className="footer-links"><Link to="/privacy">Privacy</Link><Link to="/terms">Terms & refunds</Link><Link to="/track">Track order</Link></div>
         <p>Delivery availability depends on approved barangay coverage and a valid map pin. Orders require CSR confirmation.</p>
       </footer>

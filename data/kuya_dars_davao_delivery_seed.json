@@ -1,0 +1,1668 @@
+{
+  "name": "Kuya Dars Lechon Manok — Davao City delivery rules",
+  "schema_version": 1,
+  "source_file": "Kuya_Dars_Davao_Delivery_Coverage_Radius_Pricing.xlsx",
+  "shop": {
+    "name": "Kuya Dars Lechon Manok — Tigatto (Deca Homes Esperanza)",
+    "latitude": 7.1380336,
+    "longitude": 125.5879857,
+    "location_url": "https://maps.app.goo.gl/YS5QyBsN47yNJcoq8",
+    "verify_entrance_pin_before_production": true
+  },
+  "operating_rules": {
+    "timezone": "Asia/Manila",
+    "online_ordering_open": "08:00",
+    "online_ordering_close": "22:00",
+    "chicken_unit_price_php": 280
+  },
+  "delivery_rules": {
+    "distance_method": "great_circle_haversine_km",
+    "free_if_distance_lte_km": 7,
+    "base_fee_if_distance_gt_7_lte_km": 30,
+    "base_paid_zone_max_km": 10,
+    "extra_fee_per_started_km_beyond_10_php": 10,
+    "blocked_barangays_override_distance": true,
+    "unlisted_barangays": "blocked",
+    "pin_verification_required": true
+  },
+  "barangays": [
+    {
+      "id": "davao-city-poblacion-barangay-1-a",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 1-A",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-2-a",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 2-A",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-3-a",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 3-A",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-4-a",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 4-A",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-5-a",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 5-A",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-6-a",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 6-A",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-7-a",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 7-A",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-8-a",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 8-A",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-9-a",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 9-A",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-10-a",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 10-A",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-11-b",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 11-B",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-12-b",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 12-B",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-13-b",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 13-B",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-14-b",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 14-B",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-15-b",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 15-B",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-16-b",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 16-B",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-17-b",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 17-B",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-18-b",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 18-B",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-19-b",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 19-B",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-20-b",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 20-B",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-21-c",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 21-C",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-22-c",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 22-C",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-23-c",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 23-C",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-24-c",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 24-C",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-25-c",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 25-C",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-26-c",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 26-C",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-27-c",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 27-C",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-28-c",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 28-C",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-29-c",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 29-C",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-30-c",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 30-C",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-31-d",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 31-D",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-32-d",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 32-D",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-33-d",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 33-D",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-34-d",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 34-D",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-35-d",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 35-D",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-36-d",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 36-D",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-37-d",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 37-D",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-38-d",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 38-D",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-39-d",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 39-D",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-poblacion-barangay-40-d",
+      "legislative_district": "District 1",
+      "administrative_district": "Poblacion",
+      "barangay": "Barangay 40-D",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-talomo-bago-aplaya",
+      "legislative_district": "District 1",
+      "administrative_district": "Talomo",
+      "barangay": "Bago Aplaya",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-talomo-bago-gallera",
+      "legislative_district": "District 1",
+      "administrative_district": "Talomo",
+      "barangay": "Bago Gallera",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-talomo-baliok",
+      "legislative_district": "District 1",
+      "administrative_district": "Talomo",
+      "barangay": "Baliok",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-talomo-bucana",
+      "legislative_district": "District 1",
+      "administrative_district": "Talomo",
+      "barangay": "Bucana",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-talomo-catalunan-grande",
+      "legislative_district": "District 1",
+      "administrative_district": "Talomo",
+      "barangay": "Catalunan Grande",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-talomo-catalunan-pequen-o",
+      "legislative_district": "District 1",
+      "administrative_district": "Talomo",
+      "barangay": "Catalunan Pequeño",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-talomo-dumoy",
+      "legislative_district": "District 1",
+      "administrative_district": "Talomo",
+      "barangay": "Dumoy",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-talomo-langub",
+      "legislative_district": "District 1",
+      "administrative_district": "Talomo",
+      "barangay": "Langub",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-talomo-ma-a",
+      "legislative_district": "District 1",
+      "administrative_district": "Talomo",
+      "barangay": "Ma-a",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-talomo-magtuod",
+      "legislative_district": "District 1",
+      "administrative_district": "Talomo",
+      "barangay": "Magtuod",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-talomo-matina-aplaya",
+      "legislative_district": "District 1",
+      "administrative_district": "Talomo",
+      "barangay": "Matina Aplaya",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-talomo-matina-crossing",
+      "legislative_district": "District 1",
+      "administrative_district": "Talomo",
+      "barangay": "Matina Crossing",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-talomo-matina-pangi",
+      "legislative_district": "District 1",
+      "administrative_district": "Talomo",
+      "barangay": "Matina Pangi",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-talomo-talomo",
+      "legislative_district": "District 1",
+      "administrative_district": "Talomo",
+      "barangay": "Talomo",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-agdao-agdao",
+      "legislative_district": "District 2",
+      "administrative_district": "Agdao",
+      "barangay": "Agdao",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-agdao-centro",
+      "legislative_district": "District 2",
+      "administrative_district": "Agdao",
+      "barangay": "Centro",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-agdao-gov-paciano-bangoy",
+      "legislative_district": "District 2",
+      "administrative_district": "Agdao",
+      "barangay": "Gov. Paciano Bangoy",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-agdao-gov-vicente-duterte",
+      "legislative_district": "District 2",
+      "administrative_district": "Agdao",
+      "barangay": "Gov. Vicente Duterte",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-agdao-kap-tomas-monteverde-sr",
+      "legislative_district": "District 2",
+      "administrative_district": "Agdao",
+      "barangay": "Kap. Tomas Monteverde, Sr.",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-agdao-lapu-lapu",
+      "legislative_district": "District 2",
+      "administrative_district": "Agdao",
+      "barangay": "Lapu-lapu",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-agdao-leon-garcia-sr",
+      "legislative_district": "District 2",
+      "administrative_district": "Agdao",
+      "barangay": "Leon Garcia, Sr.",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-agdao-rafael-castillo",
+      "legislative_district": "District 2",
+      "administrative_district": "Agdao",
+      "barangay": "Rafael Castillo",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-agdao-san-antonio",
+      "legislative_district": "District 2",
+      "administrative_district": "Agdao",
+      "barangay": "San Antonio",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-agdao-ubalde",
+      "legislative_district": "District 2",
+      "administrative_district": "Agdao",
+      "barangay": "Ubalde",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-agdao-wilfredo-aquino",
+      "legislative_district": "District 2",
+      "administrative_district": "Agdao",
+      "barangay": "Wilfredo Aquino",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-buhangin-acacia",
+      "legislative_district": "District 2",
+      "administrative_district": "Buhangin",
+      "barangay": "Acacia",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-buhangin-alfonso-angliongto-sr",
+      "legislative_district": "District 2",
+      "administrative_district": "Buhangin",
+      "barangay": "Alfonso Angliongto Sr.",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-buhangin-buhangin",
+      "legislative_district": "District 2",
+      "administrative_district": "Buhangin",
+      "barangay": "Buhangin",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-buhangin-cabantian",
+      "legislative_district": "District 2",
+      "administrative_district": "Buhangin",
+      "barangay": "Cabantian",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-buhangin-callawa",
+      "legislative_district": "District 2",
+      "administrative_district": "Buhangin",
+      "barangay": "Callawa",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-buhangin-communal",
+      "legislative_district": "District 2",
+      "administrative_district": "Buhangin",
+      "barangay": "Communal",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-buhangin-indangan",
+      "legislative_district": "District 2",
+      "administrative_district": "Buhangin",
+      "barangay": "Indangan",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-buhangin-mandug",
+      "legislative_district": "District 2",
+      "administrative_district": "Buhangin",
+      "barangay": "Mandug",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-buhangin-pampanga",
+      "legislative_district": "District 2",
+      "administrative_district": "Buhangin",
+      "barangay": "Pampanga",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-buhangin-sasa",
+      "legislative_district": "District 2",
+      "administrative_district": "Buhangin",
+      "barangay": "Sasa",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-buhangin-tigatto",
+      "legislative_district": "District 2",
+      "administrative_district": "Buhangin",
+      "barangay": "Tigatto",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-buhangin-vicente-hizon-sr",
+      "legislative_district": "District 2",
+      "administrative_district": "Buhangin",
+      "barangay": "Vicente Hizon Sr.",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-buhangin-waan",
+      "legislative_district": "District 2",
+      "administrative_district": "Buhangin",
+      "barangay": "Waan",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-bunawan-alejandra-navarro",
+      "legislative_district": "District 2",
+      "administrative_district": "Bunawan",
+      "barangay": "Alejandra Navarro",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-bunawan-bunawan",
+      "legislative_district": "District 2",
+      "administrative_district": "Bunawan",
+      "barangay": "Bunawan",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-bunawan-gatungan",
+      "legislative_district": "District 2",
+      "administrative_district": "Bunawan",
+      "barangay": "Gatungan",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-bunawan-ilang",
+      "legislative_district": "District 2",
+      "administrative_district": "Bunawan",
+      "barangay": "Ilang",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-bunawan-mahayag",
+      "legislative_district": "District 2",
+      "administrative_district": "Bunawan",
+      "barangay": "Mahayag",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-bunawan-mudiang",
+      "legislative_district": "District 2",
+      "administrative_district": "Bunawan",
+      "barangay": "Mudiang",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-bunawan-panacan",
+      "legislative_district": "District 2",
+      "administrative_district": "Bunawan",
+      "barangay": "Panacan",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-bunawan-san-isidro",
+      "legislative_district": "District 2",
+      "administrative_district": "Bunawan",
+      "barangay": "San Isidro",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-bunawan-tibungco",
+      "legislative_district": "District 2",
+      "administrative_district": "Bunawan",
+      "barangay": "Tibungco",
+      "service_status": "distance_based",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-paquibato-colosas",
+      "legislative_district": "District 2",
+      "administrative_district": "Paquibato",
+      "barangay": "Colosas",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-paquibato-fatima",
+      "legislative_district": "District 2",
+      "administrative_district": "Paquibato",
+      "barangay": "Fatima",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-paquibato-lumiad",
+      "legislative_district": "District 2",
+      "administrative_district": "Paquibato",
+      "barangay": "Lumiad",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-paquibato-mabuhay",
+      "legislative_district": "District 2",
+      "administrative_district": "Paquibato",
+      "barangay": "Mabuhay",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-paquibato-malabog",
+      "legislative_district": "District 2",
+      "administrative_district": "Paquibato",
+      "barangay": "Malabog",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-paquibato-mapula",
+      "legislative_district": "District 2",
+      "administrative_district": "Paquibato",
+      "barangay": "Mapula",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-paquibato-panalum",
+      "legislative_district": "District 2",
+      "administrative_district": "Paquibato",
+      "barangay": "Panalum",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-paquibato-pandaitan",
+      "legislative_district": "District 2",
+      "administrative_district": "Paquibato",
+      "barangay": "Pandaitan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-paquibato-paquibato",
+      "legislative_district": "District 2",
+      "administrative_district": "Paquibato",
+      "barangay": "Paquibato",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-paquibato-paradise-embak",
+      "legislative_district": "District 2",
+      "administrative_district": "Paquibato",
+      "barangay": "Paradise Embak",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-paquibato-salapawan",
+      "legislative_district": "District 2",
+      "administrative_district": "Paquibato",
+      "barangay": "Salapawan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-paquibato-sumimao",
+      "legislative_district": "District 2",
+      "administrative_district": "Paquibato",
+      "barangay": "Sumimao",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-paquibato-tapak",
+      "legislative_district": "District 2",
+      "administrative_district": "Paquibato",
+      "barangay": "Tapak",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-baguio-baguio",
+      "legislative_district": "District 3",
+      "administrative_district": "Baguio",
+      "barangay": "Baguio",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-baguio-cadalian",
+      "legislative_district": "District 3",
+      "administrative_district": "Baguio",
+      "barangay": "Cadalian",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-baguio-carmen",
+      "legislative_district": "District 3",
+      "administrative_district": "Baguio",
+      "barangay": "Carmen",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-baguio-gumalang",
+      "legislative_district": "District 3",
+      "administrative_district": "Baguio",
+      "barangay": "Gumalang",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-baguio-malagos",
+      "legislative_district": "District 3",
+      "administrative_district": "Baguio",
+      "barangay": "Malagos",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-baguio-tambobong",
+      "legislative_district": "District 3",
+      "administrative_district": "Baguio",
+      "barangay": "Tambobong",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-baguio-tawan-tawan",
+      "legislative_district": "District 3",
+      "administrative_district": "Baguio",
+      "barangay": "Tawan-tawan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-baguio-wines",
+      "legislative_district": "District 3",
+      "administrative_district": "Baguio",
+      "barangay": "Wines",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-biao-joaquin",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Biao Joaquin",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-calinan",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Calinan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-cawayan",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Cawayan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-dacudao",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Dacudao",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-dalagdag",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Dalagdag",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-dominga",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Dominga",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-inayangan",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Inayangan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-lacson",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Lacson",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-lamanan",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Lamanan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-lampianao",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Lampianao",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-megkawayan",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Megkawayan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-pangyan",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Pangyan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-riverside",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Riverside",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-saloy",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Saloy",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-sirib",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Sirib",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-subasta",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Subasta",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-talomo-river",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Talomo River",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-tamayong",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Tamayong",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-calinan-wangan",
+      "legislative_district": "District 3",
+      "administrative_district": "Calinan",
+      "barangay": "Wangan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-marilog-baganihan",
+      "legislative_district": "District 3",
+      "administrative_district": "Marilog",
+      "barangay": "Baganihan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-marilog-bantol",
+      "legislative_district": "District 3",
+      "administrative_district": "Marilog",
+      "barangay": "Bantol",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-marilog-buda",
+      "legislative_district": "District 3",
+      "administrative_district": "Marilog",
+      "barangay": "Buda",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-marilog-dalag",
+      "legislative_district": "District 3",
+      "administrative_district": "Marilog",
+      "barangay": "Dalag",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-marilog-datu-salumay",
+      "legislative_district": "District 3",
+      "administrative_district": "Marilog",
+      "barangay": "Datu Salumay",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-marilog-gumitan",
+      "legislative_district": "District 3",
+      "administrative_district": "Marilog",
+      "barangay": "Gumitan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-marilog-magsaysay",
+      "legislative_district": "District 3",
+      "administrative_district": "Marilog",
+      "barangay": "Magsaysay",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-marilog-malamba",
+      "legislative_district": "District 3",
+      "administrative_district": "Marilog",
+      "barangay": "Malamba",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-marilog-marilog",
+      "legislative_district": "District 3",
+      "administrative_district": "Marilog",
+      "barangay": "Marilog",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-marilog-salaysay",
+      "legislative_district": "District 3",
+      "administrative_district": "Marilog",
+      "barangay": "Salaysay",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-marilog-suawan",
+      "legislative_district": "District 3",
+      "administrative_district": "Marilog",
+      "barangay": "Suawan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-marilog-tamugan",
+      "legislative_district": "District 3",
+      "administrative_district": "Marilog",
+      "barangay": "Tamugan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-alambre",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Alambre",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-atan-awe",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Atan-Awe",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-bangkas-heights",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Bangkas Heights",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-baracatan",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Baracatan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-bato",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Bato",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-bayabas",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Bayabas",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-binugao",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Binugao",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-camansi",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Camansi",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-catigan",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Catigan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-crossing-bayabas",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Crossing Bayabas",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-daliao",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Daliao",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-daliaon-plantation",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Daliaon Plantation",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-eden",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Eden",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-kilate",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Kilate",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-lizada",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Lizada",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-lubogan",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Lubogan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-marapangi",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Marapangi",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-mulig",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Mulig",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-sibulan",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Sibulan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-sirawan",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Sirawan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-tagluno",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Tagluno",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-tagurano",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Tagurano",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-tibuloy",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Tibuloy",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-toril",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Toril",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-toril-tungakalan",
+      "legislative_district": "District 3",
+      "administrative_district": "Toril",
+      "barangay": "Tungakalan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-angalan",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Angalan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-bago-oshiro",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Bago Oshiro",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-balengaeng",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Balengaeng",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-biao-escuela",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Biao Escuela",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-biao-guianga",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Biao Guianga",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-los-amigos",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Los Amigos",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-manambulan",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Manambulan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-manuel-guianga",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Manuel Guianga",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-matina-biao",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Matina Biao",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-mintal",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Mintal",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-new-carmen",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "New Carmen",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-new-valencia",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "New Valencia",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-santo-nin-o",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Santo Niño",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-tacunan",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Tacunan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-tagakpan",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Tagakpan",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-talandang",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Talandang",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-tugbok",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Tugbok",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    },
+    {
+      "id": "davao-city-tugbok-ula",
+      "legislative_district": "District 3",
+      "administrative_district": "Tugbok",
+      "barangay": "Ula",
+      "service_status": "blocked",
+      "minimum_order_php": null,
+      "notes": null
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: kuya_dars
+      POSTGRES_USER: kuya_dars
+      POSTGRES_PASSWORD: kuya_dars
+    ports:
+      - "5432:5432"
+    volumes:
+      - kuya_dars_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kuya_dars -d kuya_dars"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  kuya_dars_pgdata:

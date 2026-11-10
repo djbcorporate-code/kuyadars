@@ -7,6 +7,7 @@ import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png?url";
 import markerShadow from "leaflet/dist/images/marker-shadow.png?url";
 import { api, post } from "../api";
 import type { Catalog, User } from "../types";
+import { safeCoordinate } from "../location";
 import { formatPhp, STORE_POINT } from "../../shared/domain";
 
 L.Icon.Default.mergeOptions({ iconUrl: markerIcon, iconRetinaUrl: markerIcon2x, shadowUrl: markerShadow });
@@ -18,7 +19,7 @@ export function OrderPage({ user }: { user: User | null }) {
   const [searchParams] = useSearchParams();
   const [catalog, setCatalog] = useState<Catalog | null>(null); const [quantity, setQuantity] = useState(1);
   const [district, setDistrict] = useState(() => searchParams.get("district") ?? ""); const [barangayId, setBarangayId] = useState(() => searchParams.get("barangay") ?? "");
-  const [pin, setPin] = useState<{ latitude: number; longitude: number }>({ ...STORE_POINT }); const [pinSource, setPinSource] = useState<"manual_map" | "geolocation">("manual_map");
+  const [pin, setPin] = useState<{ latitude: number; longitude: number }>(() => ({ latitude: safeCoordinate(searchParams.get("lat"), -90, 90, STORE_POINT.latitude), longitude: safeCoordinate(searchParams.get("lng"), -180, 180, STORE_POINT.longitude) })); const [pinSource, setPinSource] = useState<"manual_map" | "geolocation">(() => searchParams.get("pinSource") === "geolocation" ? "geolocation" : "manual_map");
   const [quote, setQuote] = useState<Quote | null>(null); const [quoting, setQuoting] = useState(false);
   const [payment, setPayment] = useState<"cod" | "gcash_manual">("cod"); const [promoCode, setPromoCode] = useState("");
   const [error, setError] = useState(""); const [created, setCreated] = useState<CreatedOrder | null>(null); const [submitting, setSubmitting] = useState(false);

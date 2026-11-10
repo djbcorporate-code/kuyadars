@@ -71,6 +71,7 @@ The application intentionally does **not** claim these are live:
 - S3-compatible private storage credentials, bucket retention/deletion rules, encryption policy, and malware-scanning service. Production refuses local storage.
 - SMTP credentials, verified sender, manager escalation recipient, and approved customer/support email copy. The console driver sends nothing and records failure rather than pretending success.
 - An approved mapping/tile provider and barangay polygon/road-access dataset. The current map uses OpenStreetMap tiles; because the seed has no polygons or road-access data, every pin remains subject to CSR review.
+- A production reverse-geocoding provider or self-hosted Nominatim instance for higher traffic. The default public Nominatim endpoint is called only after a customer taps **Order now**, makes one reverse request, displays OpenStreetMap attribution, and falls back to manual city/barangay entry when lookup is unavailable. Override it with `VITE_GEOCODER_URL` without changing application code.
 - Visual verification of the store entrance coordinate `7.1380336, 125.5879857` (the authoritative seed explicitly flags it).
 - Official logo, food photography, business contact channels, privacy retention schedule, cancellation wording, preparation cutoff/capacity, rider roster, and final legal review.
 - A public deployment, TLS/domain, monitoring/backups, S3 CORS policy, and production secret rotation.

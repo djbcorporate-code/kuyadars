@@ -1,14 +1,16 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { api } from "../api";
 import type { Catalog } from "../types";
+import { isDavaoCity, matchCoverageBarangay, reverseGeocode } from "../location";
 import { formatPhp } from "../../shared/domain";
 
 export function HomePage() {
   const [catalog, setCatalog] = useState<Catalog | null>(null);
-  const [district, setDistrict] = useState("");
-  const [barangayId, setBarangayId] = useState("");
+  const [locationMode, setLocationMode] = useState<"idle" | "locating" | "manual" | "outside">("idle");
+  const [locationMessage, setLocationMessage] = useState("");
+  const [manualCity, setManualCity] = useState("");
+  const [manualBarangayId, setManualBarangayId] = useState("");
   const navigate = useNavigate();
   useEffect(() => { api<Catalog>("/api/catalog").then(setCatalog).catch(() => setCatalog(null)); }, []);
   const chicken = catalog?.products[0];
@@ -16,16 +18,65 @@ export function HomePage() {
   const freeRadius = catalog?.settings.free_radius_km ?? "7";
   const baseFee = catalog ? formatPhp(catalog.settings.paid_zone_base_fee_centavos) : "₱30";
   const extraFee = catalog ? formatPhp(catalog.settings.extra_started_km_fee_centavos) : "₱10";
-  const districts = useMemo(() => [...new Set(catalog?.coverage.map((item) => item.administrative_district) ?? [])], [catalog]);
-  const barangays = catalog?.coverage.filter((item) => item.administrative_district === district) ?? [];
-  const selectedBarangay = catalog?.coverage.find((item) => item.id === barangayId);
-  const isBlocked = selectedBarangay?.service_status === "blocked";
+  const coverage = useMemo(() => [...(catalog?.coverage ?? [])].sort((a, b) => a.barangay.localeCompare(b.barangay, undefined, { numeric: true })), [catalog]);
+  const selectedManualBarangay = coverage.find((item) => item.id === manualBarangayId);
+  const manualCitySupported = isDavaoCity(manualCity);
 
-  function continueToOrder(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    if (!district || !barangayId || isBlocked) return;
-    const query = new URLSearchParams({ district, barangay: barangayId });
+  function goToOrder(barangay: Catalog["coverage"][number], coordinates?: { latitude: number; longitude: number }) {
+    const query = new URLSearchParams({ district: barangay.administrative_district, barangay: barangay.id });
+    if (coordinates) {
+      query.set("lat", coordinates.latitude.toString());
+      query.set("lng", coordinates.longitude.toString());
+      query.set("pinSource", "geolocation");
+    }
     navigate(`/order?${query.toString()}`);
+  }
+
+  function continueManually(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!manualCitySupported || !selectedManualBarangay || selectedManualBarangay.service_status === "blocked") return;
+    goToOrder(selectedManualBarangay);
+  }
+
+  function showManual(message: string) {
+    setLocationMode("manual");
+    setLocationMessage(message);
+  }
+
+  function startOrder() {
+    setLocationMessage("");
+    if (!navigator.geolocation) {
+      showManual("Automatic location is unavailable on this device. Enter your city and barangay instead.");
+      return;
+    }
+    setLocationMode("locating");
+    navigator.geolocation.getCurrentPosition(async (position) => {
+      const coordinates = { latitude: position.coords.latitude, longitude: position.coords.longitude };
+      try {
+        const resolved = await reverseGeocode(coordinates.latitude, coordinates.longitude);
+        if (!isDavaoCity(resolved.city)) {
+          setLocationMode("outside");
+          setLocationMessage("We do not serve this city for now.");
+          return;
+        }
+        const barangay = matchCoverageBarangay(resolved.barangayCandidates, catalog?.coverage ?? []);
+        if (!barangay) {
+          setManualCity("Davao City");
+          showManual("We found Davao City but could not confidently identify your barangay. Please select it below.");
+          return;
+        }
+        if (barangay.service_status === "blocked") {
+          setLocationMode("outside");
+          setLocationMessage("We do not serve this barangay for now.");
+          return;
+        }
+        goToOrder(barangay, coordinates);
+      } catch {
+        showManual("We could not confirm your area automatically. Enter your city and barangay instead.");
+      }
+    }, () => {
+      showManual("Location access was declined or unavailable. Enter your city and barangay instead.");
+    }, { enableHighAccuracy: true, timeout: 10_000, maximumAge: 60_000 });
   }
 
   return <>
@@ -38,30 +89,30 @@ export function HomePage() {
           </div>
           <span className="eyebrow">Davao City's lechon manok</span>
           <h1>Extra laki.<br/><em>Delivered.</em></h1>
-          <p>Enter your area first. We’ll confirm coverage, then calculate the exact delivery fee from your map pin before you submit.</p>
-          <form className="address-finder" onSubmit={continueToOrder} aria-label="Check delivery coverage">
-            <div className="address-finder-title"><span aria-hidden="true">⌖</span><strong>Where should we deliver?</strong></div>
-            <div className="address-fields">
-              <label>
-                <span>District</span>
-                <select value={district} onChange={(event) => { setDistrict(event.target.value); setBarangayId(""); }} required>
-                  <option value="">Choose district</option>
-                  {districts.map((value) => <option key={value}>{value}</option>)}
-                </select>
-              </label>
-              <label>
-                <span>Barangay</span>
-                <select value={barangayId} onChange={(event) => setBarangayId(event.target.value)} disabled={!district} required>
-                  <option value="">Choose barangay</option>
-                  {barangays.map((item) => <option key={item.id} value={item.id}>{item.barangay}{item.service_status === "blocked" ? " — unavailable" : ""}</option>)}
-                </select>
-              </label>
-              <button type="submit" disabled={!barangayId || isBlocked}>Find delivery options <span aria-hidden="true">→</span></button>
-            </div>
-            <p className={`coverage-message ${isBlocked ? "blocked" : ""}`} aria-live="polite">
-              {isBlocked ? "This barangay is outside the approved delivery coverage." : selectedBarangay ? "Area available. Continue to pin your exact address and see the fee." : "All 182 Davao City barangays are checked against the approved coverage list."}
-            </p>
-          </form>
+          <p>Freshly roasted and delivered across supported Davao City barangays. We’ll show the exact delivery fee before you submit.</p>
+          <div className="hero-order-action">
+            <button className="hero-order-now" type="button" onClick={startOrder} disabled={locationMode === "locating"}>
+              <span className="hero-order-icon" aria-hidden="true">⌖</span>
+              <span><strong>{locationMode === "locating" ? "Finding your location…" : "Order now"}</strong><small>{locationMode === "locating" ? "Please respond to the browser prompt" : "Use my current location"}</small></span>
+              <span className="hero-order-arrow" aria-hidden="true">→</span>
+            </button>
+            <p>We only request location after you tap. You can enter your area manually if you decline. Lookup © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap contributors</a>.</p>
+          </div>
+
+          <div className="location-response" aria-live="polite">
+            {locationMode === "outside" && <div className="location-notice outside"><strong>Outside our current delivery area</strong><p>{locationMessage}</p></div>}
+            {locationMode === "manual" && <form className="manual-location" onSubmit={continueManually} aria-label="Enter delivery area manually">
+              <div className="manual-location-heading"><div><strong>Enter your delivery area</strong><p>{locationMessage}</p></div><button type="button" onClick={startOrder}>Try location again</button></div>
+              <div className="manual-location-fields">
+                <label><span>City</span><input value={manualCity} onChange={(event) => { setManualCity(event.target.value); setManualBarangayId(""); }} placeholder="Davao City" autoComplete="address-level2" required /></label>
+                <label><span>Barangay</span><select value={manualBarangayId} onChange={(event) => setManualBarangayId(event.target.value)} disabled={!manualCitySupported || coverage.length === 0} required><option value="">Choose barangay</option>{coverage.map((item) => <option key={item.id} value={item.id}>{item.barangay}{item.service_status === "blocked" ? " — unavailable" : ""}</option>)}</select></label>
+                <button type="submit" disabled={!manualCitySupported || !selectedManualBarangay || selectedManualBarangay.service_status === "blocked"}>Continue <span aria-hidden="true">→</span></button>
+              </div>
+              {!manualCitySupported && manualCity.trim() && <p className="manual-service-message">We do not serve this city for now.</p>}
+              {selectedManualBarangay?.service_status === "blocked" && <p className="manual-service-message">We do not serve this barangay for now.</p>}
+              {coverage.length === 0 && <p className="manual-service-message">Delivery areas are still loading. Please try again in a moment.</p>}
+            </form>}
+          </div>
         </div>
         <div className="hero-product" aria-label="Kuya Dars signature lechon manok">
           <div className="hero-product-badge">Extra laki<br/><strong>Extra sarap</strong></div>

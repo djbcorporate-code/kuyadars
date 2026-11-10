@@ -654,3 +654,68 @@ footer span{color:var(--gold);font-weight:800}
   .hero-price-card>strong{font-size:22px}
   .market-section{width:calc(100% - 28px)}
 }
+
+/* Location-first hero action. Permission is requested only after the customer taps Order now. */
+.hero-order-action{margin-top:34px;max-width:560px}
+.hero-order-now{
+  width:min(100%,500px);
+  min-height:84px;
+  padding:14px 18px;
+  display:grid;
+  grid-template-columns:48px 1fr auto;
+  gap:15px;
+  align-items:center;
+  border:0;
+  border-radius:17px;
+  background:linear-gradient(135deg,#e21519,var(--wine));
+  color:#fff;
+  text-align:left;
+  box-shadow:0 16px 35px rgba(174,7,10,.25);
+  cursor:pointer;
+}
+.hero-order-now:hover{background:linear-gradient(135deg,#ef2024,#a9080b);transform:translateY(-2px);box-shadow:0 19px 40px rgba(174,7,10,.3)}
+.hero-order-now:disabled{opacity:.72;cursor:wait;transform:none}
+.hero-order-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:13px;background:#fff;color:var(--wine);font-size:24px;font-weight:900}
+.hero-order-now>span:nth-child(2){display:flex;flex-direction:column;gap:4px}
+.hero-order-now strong{font-size:23px;line-height:1;text-transform:uppercase;letter-spacing:-.02em}
+.hero-order-now small{font-size:10px;color:#ffdfe0;font-weight:700;letter-spacing:.02em}
+.hero-order-arrow{font-size:26px;font-weight:700}
+.hero-order-action>p{max-width:500px;margin:12px 4px 0;color:#786961;font-size:9px;line-height:1.55}
+.hero-order-action>p a{font-weight:800;text-underline-offset:2px}
+.location-response{max-width:620px;margin-top:17px}
+.location-notice{padding:18px 20px;border:1px solid #e9c8c5;border-radius:14px;background:#fff4f2;color:#7d1717}
+.location-notice strong{font-size:13px}
+.location-notice p{margin:5px 0 0;font-size:12px;line-height:1.5}
+.manual-location{padding:20px;border:1px solid #e5ddd7;border-radius:17px;background:#fff;box-shadow:0 16px 38px rgba(60,31,15,.1)}
+.manual-location-heading{display:flex;align-items:start;justify-content:space-between;gap:15px;margin-bottom:17px}
+.manual-location-heading strong{font-size:14px}
+.manual-location-heading p{margin:5px 0 0;color:var(--muted);font-size:10px;line-height:1.5}
+.manual-location-heading button{padding:0;border:0;background:transparent;color:var(--wine);font-size:10px;font-weight:900;text-decoration:underline;text-underline-offset:3px;cursor:pointer;white-space:nowrap}
+.manual-location-fields{display:grid;grid-template-columns:minmax(130px,.75fr) minmax(180px,1fr) auto;gap:9px;align-items:end}
+.manual-location-fields label{display:flex;flex-direction:column;gap:6px}
+.manual-location-fields label>span{font-size:9px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.manual-location-fields input,.manual-location-fields select{width:100%;min-height:50px;padding:0 13px;border:1px solid #d8d1cb;border-radius:10px;background:#fff;color:var(--ink);font-size:12px;font-weight:700}
+.manual-location-fields select{padding-right:36px}
+.manual-location-fields input:disabled,.manual-location-fields select:disabled{background:#f6f3f1;color:#aaa09a}
+.manual-location-fields>button{min-height:50px;padding:0 17px;display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:10px;background:var(--wine);color:#fff;font-size:11px;font-weight:900;cursor:pointer}
+.manual-location-fields>button:hover{background:var(--wine-dark)}
+.manual-location-fields>button:disabled{background:#c7bdb7;cursor:not-allowed}
+.manual-service-message{margin:12px 0 0;padding:10px 12px;border-radius:9px;background:#fff0ee;color:#a31517;font-size:10px;font-weight:800}
+
+@media(max-width:760px){
+  .hero-order-action{max-width:none}
+  .hero-order-now{width:100%;min-height:78px;grid-template-columns:44px 1fr auto;padding:12px 14px}
+  .hero-order-icon{width:44px;height:44px}
+  .hero-order-now strong{font-size:20px}
+  .manual-location{padding:17px 15px}
+  .manual-location-heading{flex-direction:column}
+  .manual-location-fields{grid-template-columns:1fr}
+  .manual-location-fields>button{margin-top:3px}
+}
+
+@media(max-width:420px){
+  .hero-order-now{grid-template-columns:42px 1fr auto;gap:11px}
+  .hero-order-icon{width:42px;height:42px}
+  .hero-order-now strong{font-size:18px}
+  .hero-order-arrow{font-size:20px}
+}

@@ -17,16 +17,21 @@ export function App() {
   const isStaff = user?.roles.some((role) => ["owner", "admin", "csr"].includes(role));
   return (
     <div className="site-shell">
-      <header className="topbar">
+      <header className="market-topbar">
         <Link to="/" className="brand" aria-label="Kuya Dars home">
           <span className="brand-mark" aria-hidden="true"><img src="/kuya-dars-logo.png" alt="" width="1254" height="1254" decoding="async" /></span>
           <span className="brand-name"><strong>Kuya Dars</strong><small>Lechon Manok</small></span>
+        </Link>
+        <Link className="header-location" to="/order" aria-label="Set your delivery address">
+          <span className="header-location-icon" aria-hidden="true">⌖</span>
+          <span><small>Delivering in</small><strong>Davao City</strong></span>
+          <span className="header-chevron" aria-hidden="true">⌄</span>
         </Link>
         <nav aria-label="Main navigation">
           {isStaff && <NavLink className="nav-secondary" to="/csr">Operations</NavLink>}
           <NavLink className="nav-secondary" to="/track">Track order</NavLink>
           <NavLink className="nav-account" to="/account">{user ? user.fullName.split(" ")[0] : "Sign in"}</NavLink>
-          <NavLink className="nav-order" to="/order">Order now <span aria-hidden="true">→</span></NavLink>
+          <NavLink className="nav-order" to="/order"><span className="bag-icon" aria-hidden="true">▢</span><span>Order now</span></NavLink>
         </nav>
       </header>
       <main>

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import L, { type LeafletEvent } from "leaflet";
 import { MapContainer, Marker, TileLayer, useMapEvents } from "react-leaflet";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import markerIcon from "leaflet/dist/images/marker-icon.png?url";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png?url";
 import markerShadow from "leaflet/dist/images/marker-shadow.png?url";
@@ -15,8 +15,9 @@ type Quote = { distanceKm: number; deliveryFeeCentavos: number; needsCsrReview: 
 type CreatedOrder = { reference: string; trackingUrl: string; trackingToken: string; message: string; totals: { totalCentavos: number } };
 
 export function OrderPage({ user }: { user: User | null }) {
+  const [searchParams] = useSearchParams();
   const [catalog, setCatalog] = useState<Catalog | null>(null); const [quantity, setQuantity] = useState(1);
-  const [district, setDistrict] = useState(""); const [barangayId, setBarangayId] = useState("");
+  const [district, setDistrict] = useState(() => searchParams.get("district") ?? ""); const [barangayId, setBarangayId] = useState(() => searchParams.get("barangay") ?? "");
   const [pin, setPin] = useState<{ latitude: number; longitude: number }>({ ...STORE_POINT }); const [pinSource, setPinSource] = useState<"manual_map" | "geolocation">("manual_map");
   const [quote, setQuote] = useState<Quote | null>(null); const [quoting, setQuoting] = useState(false);
   const [payment, setPayment] = useState<"cod" | "gcash_manual">("cod"); const [promoCode, setPromoCode] = useState("");
@@ -56,7 +57,8 @@ export function OrderPage({ user }: { user: User | null }) {
   }
   if (created) return <section className="confirmation-page"><div className="confirmation-mark">✓</div><span className="eyebrow">Order safely submitted</span><h1>{created.reference}</h1><p>{created.message}</p><div className="confirmation-total"><span>Order total</span><strong>{formatPhp(created.totals.totalCentavos)}</strong></div><Link className="button button-primary" to={`/track/${created.trackingToken}`}>Open secure tracking</Link><p className="fine-print">Save the private tracking link. It is also queued for email delivery. Do not share it publicly.</p></section>;
   return <section className="order-page">
-    <div className="order-title"><span className="eyebrow">Order online</span><h1>Build your delivery.</h1><p>Available 08:00–22:00 Asia/Manila. Every submission is reviewed before acceptance.</p></div>
+    <div className="order-title"><div><span className="eyebrow">Kuya Dars delivery</span><h1>Complete your order</h1><p>Choose your quantity, confirm the delivery fee, then add your contact and payment details.</p></div><div className="order-assurance"><span className={`availability-dot ${catalog?.settings.orderOpenNow ? "open" : "closed"}`} /><strong>{catalog?.settings.orderOpenNow ? "Open for orders" : "Ordering closed"}</strong><small>08:00–22:00 Asia/Manila</small></div></div>
+    <ol className="checkout-progress" aria-label="Checkout progress"><li className="active"><span>1</span>Order</li><li><span>2</span>Delivery</li><li><span>3</span>Details</li><li><span>4</span>Review</li></ol>
     {catalog && !catalog.settings.orderOpenNow && <div className="alert warning">Online ordering is currently closed. Tracking and account access remain available.</div>}
     {error && <div className="alert error">{error}</div>}
     <form onSubmit={submit} className="checkout-layout">
